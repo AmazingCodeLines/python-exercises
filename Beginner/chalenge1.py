@@ -1,3 +1,40 @@
+"""
+Challenge Exercise 1: Tip Calculator with Input Validation
+
+Objective:
+
+Create a tip calculator program that prompts the user for the total bill amount, the desired tip percentage, 
+and the number of people to split the bill. 
+The program should validate user inputs to ensure they are numbers that can be used in the calculations. 
+Finally, the program should output the calculated tip, total bill, and the amount each person should pay.
+
+Requirements:
+Welcome Message: Display a welcome message to the user.
+
+Input Prompts:
+Ask the user for the total bill amount.
+Ask the user for the tip percentage they would like to give.
+Ask the user for the number of people to split the bill.
+
+Input Validation:
+Ensure that the total bill amount and tip percentage are valid floating-point numbers.
+Ensure that the number of people to split the bill is a valid integer.
+If an invalid input is entered, prompt the user again until a valid input is received.
+
+Calculations:
+Calculate the tip amount based on the bill and tip percentage.
+Calculate the total bill including the tip.
+Calculate the amount each person should pay.
+
+Output:
+Display the original bill amount.
+Display the calculated tip amount.
+Display the total bill amount (bill + tip).
+Display the amount each person should pay.
+"""
+
+
+
 
 print("Welcome to the Tip calculator!")
 
