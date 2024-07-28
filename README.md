@@ -5,8 +5,19 @@ A collection of Python coding exercises and challenges ranging from beginner to 
 
 ## Directory Structure
 - `beginner/`: Beginner level exercises
-- `intermediate/`: Intermediate level exercises
-- `advanced/`: Advanced level exercises
+
+# Challenge 1: Tip Calculator
+# Challenge 2: Leap Year
+# Challenge 3: Python Pizza Deliveries
+# Challenge 4: Love calculator
+# Challenge 5: Text-Based Adventure Game
+# Challenge 6: Mark a Spot on a Map with an X
+# Challenge 7: Rock, Paper, Scissors
+# Challenge 8: Highest Score
+# Challenge 9: FizzBuzz game
+# Challenge 10: Password Generator
+# Challenge 11: Challenge 11: Hangman part 1
+
 
 ## Getting Started
 To get started with this repository, follow these steps:

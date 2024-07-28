@@ -1,5 +1,5 @@
 """
-Challenge Exercise 2: 
+Challenge Exercise 2: Leap year
 
 Write a Python program that determines whether a given year is a leap year or not. 
 Your program should meet the following requirements:
