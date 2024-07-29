@@ -24,5 +24,5 @@ To get started with this repository, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/python-exercises.git
+   git clone https://github.com/AmazingCodeLines/python-exercises.git
    cd python-exercises
