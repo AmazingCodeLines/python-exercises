@@ -32,20 +32,22 @@ you through the process:
     """
 import random
 
-random_decimal = random.randint(1,1000)
+random_decimal = random.randint(1, 100)
 
 def decimal_to_binary(decimal):
 
     binary = []
-
+    
     while decimal > 0:
             rest = decimal % 2
             binary.append(rest)
             decimal = decimal // 2
-    
+
     return binary
 
 binary_number = decimal_to_binary(random_decimal)
+binary_number.reverse()
+
 print(binary_number)
 
 
