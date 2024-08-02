@@ -47,4 +47,4 @@ def binary_to_decimal(binary):
 
 binary_number = "1010"
 decimal_number = binary_to_decimal(binary_number)
-print(f"Das Dezimaläquivalent von Binär {binary_number} ist {decimal_number:_}")
+print(f"The decimal equivalent of binary {binary_number} is {decimal_number:_}")
