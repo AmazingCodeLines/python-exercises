@@ -34,6 +34,8 @@ Instructions:
 
 """
 
+binary_number = "1010"
+
 def binary_to_decimal(binary):
 
     decimal = 0
@@ -45,6 +47,6 @@ def binary_to_decimal(binary):
     
     return decimal
 
-binary_number = "1010"
+
 decimal_number = binary_to_decimal(binary_number)
 print(f"The decimal equivalent of binary {binary_number} is {decimal_number:_}")

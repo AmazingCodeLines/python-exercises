@@ -30,6 +30,7 @@ you through the process:
 	•	Once you’ve determined the binary number, you can verify your result by converting the binary number back to 
     decimal and checking if it matches the original decimal number.
     """
+
 import random
 
 random_decimal = random.randint(1, 100)
