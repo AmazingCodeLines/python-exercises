@@ -1,5 +1,5 @@
 """
-Challenge 12-2: Sum Binaries
+Challenge 12-2: Sum Binaries without negatives
 
 Creating a binary calculator that performs arithmetic operations like addition can be an interesting project to develop your understanding 
 of binary numbers and how computers perform arithmetic operations. Here are some tips to guide you through the process of coding a binary 
