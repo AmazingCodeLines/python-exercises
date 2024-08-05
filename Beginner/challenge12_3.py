@@ -51,6 +51,24 @@ Additional Tips
     borrowing where necessary.
 	•	Output:
 	•	Display the result of the subtraction in binary form, ensuring no leading zeros unless the result is zero.
+
+    The binary subtraction of two bits involves four possible scenarios:
+
+	1.	0 - 0 = 0
+	•	Result: 0
+	•	Borrow: 0
+	
+    2.	1 - 0 = 1
+	•	Result: 1
+	•	Borrow: 0
+	
+    3.	1 - 1 = 0
+	•	Result: 0
+	•	Borrow: 0
+	
+    4.	0 - 1 = 1 (with borrow from the next higher bit)
+	•	Result: 1
+	•	Borrow: 1 (borrow from the next higher bit)
     """
 
 import random
@@ -70,10 +88,16 @@ def check_non_negative_subtraction(binary_one_length, binary_two_length):
         for i in range(binary_one_length):
             binary_digit = random.choice(["0", "1"])
             binary_one.append(binary_digit)
+        
+        # to make sure the binary starts with a 1
+        binary_one[0] = "1"
 
         for i in range(binary_two_length):
             binary_digit = random.choice(["0", "1"])
             binary_two.append(binary_digit)
+
+        # to make sure the binary has at least a 1
+        binary_two[-1] = "1"
 
         for i in range(len(binary_one)):
             power = len(binary_one) - 1 - i
@@ -84,24 +108,52 @@ def check_non_negative_subtraction(binary_one_length, binary_two_length):
             decimal_two += int(binary_two[i]) * (2**power)
 
         if decimal_one > decimal_two:
-            return binary_one, binary_two, decimal_one, decimal_two
+            return binary_one, binary_two
 
 
-binary_one, binary_two, decimal_one, decimal_two = check_non_negative_subtraction(binary_one_length, binary_two_length) 
-
-print(binary_one)
-print(binary_two)
-print(decimal_one)
-print(decimal_two)
-
-
-
-
-
+def check_padding_need(binary_one, binary_two):
     
-
-
-
-
-
+    max_length = max(len(binary_one), len(binary_two))
     
+    padded_binary_one = ["0"] * (max_length - len(binary_one)) + binary_one
+    padded_binary_two = ["0"] * (max_length - len(binary_two)) + binary_two
+
+    return padded_binary_one, padded_binary_two
+
+
+def subtraction_of_binaries(padded_binary_one, padded_binary_two):
+    difference_of_binaries = []
+    borrow = 0
+
+    for i in range(len(padded_binary_one) - 1, -1, -1):
+        
+        digit_binary_one = int(padded_binary_one[i])
+        digit_binary_two = int(padded_binary_two[i])
+
+        if borrow != 0:
+            digit_binary_one -= 1
+            borrow = 0
+
+        if digit_binary_one < digit_binary_two:
+            digit_binary_one += 2
+            borrow = 1
+        
+        bit_result = digit_binary_one - digit_binary_two
+        difference_of_binaries.append(str(bit_result))
+    
+    difference_of_binaries.reverse()
+    
+    return ''.join(difference_of_binaries)
+
+# output for control and debug
+binary_one, binary_two = check_non_negative_subtraction(binary_one_length, binary_two_length) 
+padded_binary_one, padded_binary_two = check_padding_need(binary_one, binary_two)
+difference_of_binaries = subtraction_of_binaries(padded_binary_one, padded_binary_two)
+
+print(' '.join(binary_one))
+print(' '.join(binary_two))
+print("-----------------")
+print(' '.join(padded_binary_one))
+print(' '.join(padded_binary_two))
+print("-----------------")
+print(' '.join(difference_of_binaries))
